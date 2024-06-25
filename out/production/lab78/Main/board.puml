@@ -1,0 +1,103 @@
+
+@startuml
+class Board {
+  -int SIZE
+  -Tile[][] tiles
+  -int score
+  +isGameOver(): boolean
+  +resetGame(): void
+  +getScore(): int
+}
+
+class BoardFrame {
+  -Board board
+  +move(Direction direction): void
+  +updateBoard(): void
+  +checkGameOver(): void
+}
+
+class BoardSaveFile {
+  +save(Board board): void
+  +load(): Board
+}
+
+class BoardSaver {
+  -BoardSaveFile saveFile
+  +save(Board board): void
+  +load(): Board
+}
+
+class Context {
+  -State state
+}
+
+class Main {
+  -BoardFrame boardFrame
+  -Context context
+  +main(String[] args): void
+}
+
+class MenuFrame {
+  -Main main
+}
+
+class MoveDownStrategy {
+  +move(Board board): void
+}
+
+class MoveLeftStrategy {
+  +move(Board board): void
+}
+
+class MoveRightStrategy {
+  +move(Board board): void
+}
+
+class MoveUpStrategy {
+  +move(Board board): void
+}
+
+class MyFrame {
+  -BoardFrame boardFrame
+  -MenuFrame menuFrame
+}
+
+class MyFrameDirector {
+  -MyFrame myFrame
+  +setBoardFrame(): void
+  +setMenuFrame(): void
+}
+
+interface Strategy {
+  +move(Board board): void
+}
+
+class TextBubbleBorder {
+  +paintBorder(): void
+}
+
+class Tile {
+  -int value
+  +getValue(): int
+  +setValue(int value): void
+}
+
+Board --|> BoardFrame
+BoardFrame --|> Board
+BoardSaver --|> BoardSaveFile
+BoardSaveFile --> Board
+MenuFrame --> Main
+Main --> BoardFrame
+Main --> Context
+Strategy <|.. MoveDownStrategy
+Strategy <|.. MoveLeftStrategy
+Strategy <|.. MoveRightStrategy
+Strategy <|.. MoveUpStrategy
+Board *-- Tile
+MyFrame --|> BoardFrame
+MyFrame --|> MenuFrame
+MyFrameDirector --|> MyFrame
+Board --|> Strategy
+TextBubbleBorder --> BoardFrame
+@enduml
+
