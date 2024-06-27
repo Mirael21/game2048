@@ -66,8 +66,8 @@ public class MenuFrame extends JFrame implements MyFrame {
      */
     public void addButton4x4() {
         JButton button4x4 = new JButton("4x4");
-        button4x4.setBackground(Color.decode("#9b6df7"));
-        AbstractBorder brdr = new TextBubbleBorder(Color.BLACK,0,40,0);
+        button4x4.setBackground(Color.decode("#eec7fc"));
+        AbstractBorder brdr = new TextBubbleBorder(Color.decode("#eec7fc"),0,40,0);
         button4x4.setBorder(brdr);
         button4x4.setFont(new Font("Serif", Font.BOLD, 32));
         button4x4.setForeground(Color.WHITE);
@@ -87,7 +87,7 @@ public class MenuFrame extends JFrame implements MyFrame {
     public void addButton5x5() {
         JButton button5x5 = new JButton("5x5");
         button5x5.setBackground(Color.decode("#9b6df7"));
-        AbstractBorder brdr = new TextBubbleBorder(Color.BLACK,0,40,0);
+        AbstractBorder brdr = new TextBubbleBorder(Color.decode("#eec7fc"),0,40,0);
         button5x5.setBorder(brdr);
         button5x5.setFont(new Font("Serif", Font.BOLD, 32));
         button5x5.setForeground(Color.WHITE);
@@ -109,7 +109,7 @@ public class MenuFrame extends JFrame implements MyFrame {
         button6x6.setBackground(Color.decode("#9b6df7"));
         button6x6.setFont(new Font("Serif", Font.BOLD, 32));
         button6x6.setForeground(Color.WHITE);
-        AbstractBorder brdr = new TextBubbleBorder(Color.BLACK,0,40,0);
+        AbstractBorder brdr = new TextBubbleBorder(Color.decode("#eec7fc"),0,40,0);
         button6x6.setBorder(brdr);
         buttonPanel.add(button6x6);
         button6x6.addActionListener(new ActionListener() {
@@ -129,7 +129,7 @@ public class MenuFrame extends JFrame implements MyFrame {
         button7x7.setBackground(Color.decode("#9b6df7"));
         button7x7.setFont(new Font("Serif", Font.BOLD, 32));
         button7x7.setForeground(Color.WHITE);
-        AbstractBorder brdr = new TextBubbleBorder(Color.BLACK,0,40,0);
+        AbstractBorder brdr = new TextBubbleBorder(Color.decode("#eec7fc"),0,40,0);
         button7x7.setBorder(brdr);
         buttonPanel.add(button7x7);
         button7x7.addActionListener(new ActionListener() {

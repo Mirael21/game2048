@@ -1,6 +1,5 @@
 
 @startuml
-
 class Board {
   -int SIZE
   -Tile[][] tiles
@@ -101,4 +100,3 @@ MyFrameDirector --|> MyFrame
 Board --|> Strategy
 TextBubbleBorder --> BoardFrame
 @enduml
-
